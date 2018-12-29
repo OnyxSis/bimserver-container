@@ -43,7 +43,7 @@ apply_setup_settings () {
 	    }  
 	  }
 	}' "http://${BIM_SERVER_HOST}:${BIM_SERVER_PORT}/bimserver/json" )
-	if [ $result != '{"response":{"result":{}}}' ]; then
+	if [[ $result != '{"response":{"result":{}}}' ]]; then
 		echo "BIMServer setup failed, server response: $result"
 		exit 5
 	fi
